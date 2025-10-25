@@ -13,7 +13,7 @@ for (let i = 0; i < numFlakes; i++) {
 }
 
 // ===== MUSIK =====
-const audio = new Audio("https://cdn.pixabay.com/audio/2023/07/18/audio_14a5b3c3e3.mp3"); // ganti link mp3 sesuai kamu
+const audio = new Audio("audio.mp3"); // ganti link mp3 sesuai kamu
 audio.loop = true;
 audio.preload = "none";
 
@@ -52,3 +52,4 @@ window.addEventListener("load", () => {
   typeText("title", title, 80);
   setTimeout(() => typeText("message", message, 45), 2000);
 });
+
