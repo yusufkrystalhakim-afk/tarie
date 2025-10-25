@@ -1,0 +1,108 @@
+:root {
+  --gold: #f7d38b;
+  --text-light: #f0f0f5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #0a0a1a, #1a1a2f);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-light);
+  position: relative;
+}
+
+/* Tombol pembuka */
+#intro {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #101020, #1f1f2f);
+}
+
+#openButton {
+  background: rgba(247, 211, 139, 0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 1.3rem;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+#openButton:hover {
+  background: rgba(247, 211, 139, 0.4);
+  transform: scale(1.05);
+}
+
+/* Konten utama */
+#content {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+#birthdayGif {
+  width: 220px;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInGif 1.8s ease forwards;
+  animation-delay: 0.5s;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+@keyframes fadeInGif {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#message {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto;
+  white-space: pre-line;
+  opacity: 0;
+  animation: fadeInText 1s ease forwards;
+  animation-delay: 2.3s;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Salju lembut */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 0;
+}
+@keyframes fall {
+  0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+  100% { transform: translateY(100vh) translateX(30px); opacity: 0.3; }
+}
