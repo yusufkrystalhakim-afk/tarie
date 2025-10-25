@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Happy Birthday</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="intro">
-    <button id="openButton">🎁 Open Surprise</button>
-  </div>
+  <div class="container">
+    <button id="openButton" class="open-btn">🎁 Open the surprise!</button>
 
-  <div id="content" class="hidden">
-    <img src="gif.gif" alt="birthday cat" id="birthdayGif">
-    <div id="message"></div>
+    <div id="content" class="hidden">
+      <img src="gif.gif" alt="Birthday Cat" class="birthday-gif" />
+      <p id="typingText" class="typing-text"></p>
+      <audio id="bgMusic" src="audio.mp3"></audio>
+    </div>
   </div>
-
-  <audio id="bgMusic" src="audio.mp3" loop preload="none"></audio>
 
   <script src="script.js"></script>
 </body>
